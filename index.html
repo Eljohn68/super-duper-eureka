@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balik kana rhezyl hahaahahahaah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #fdf2f5;
+            color: #4a4a4a;
+            overflow-x: hidden;
+        }
+        
+        .heart {
+            animation: beat 1.5s infinite alternate;
+            transform-origin: center;
+        }
+        
+        @keyframes beat {
+            to { transform: scale(1.1); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 2s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .polaroid {
+            transition: all 0.3s ease;
+            background: white;
+            padding: 15px 15px 40px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .polaroid:hover {
+            transform: rotate(-5deg) scale(1.05);
+        }
+        
+        .memory-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .typed-text {
+            border-right: 2px solid #333;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 2s steps(40);
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        .envelope {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background: #f8d7da;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 0 auto;
+            cursor: pointer;
+            transition: all 0.3s;
+            overflow: hidden;
+        }
+        
+        .envelope:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .envelope:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 100px 150px 0 150px;
+            border-color: #d9a5b3 transparent transparent transparent;
+            transform-origin: top;
+        }
+        
+        .letter {
+            position: absolute;
+            width: 90%;
+            height: 160px;
+            background: white;
+            left: 5%;
+            top: 5px;
+            padding: 15px;
+            box-sizing: border-box;
+            transition: all 0.3s;
+            z-index: 1;
+            transform: translateY(0);
+        }
+        
+        .envelope:hover .letter {
+            transform: translateY(-60px);
+        }
+        
+        .btn-custom {
+            background: linear-gradient(45deg, #d16ba5, #ee8572);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #d9a5b3;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -1px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #d16ba5;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+            text-align: right;
+        }
+        
+        .right {
+            left: 50%;
+            text-align: left;
+        }
+        
+        .left::after {
+            left: -10px;
+        }
+        
+        .right::after {
+            right: -10px;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <!-- Hero Section -->
+        <section class="text-center py-16 fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" style="font-family: 'Dancing Script', cursive;">i would choose you if i were to pic between you and all of the girls a million times</h1>
+            <p class="text-xl mb-8">give me another chance baiii</p>
+            
+            <div class="flex justify-center mb-8">
+                <svg class="heart w-20 h-20 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                </svg>
+            </div>
+            
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg mb-12">
+                <p class="text-lg mb-6">"Ana ka sauna dili ko nimo byaan nya bayby nako nimo forever"</p>
+                <p class="text-sm text-gray-600">- ingon nimo sauna hahah </p>
+            </div>
+        </section>
+        
+        <!-- Memory Lane -->
+        <section class="py-12">
+            <h2 class="text-3xl font-bold text-center mb-12" style="font-family: 'Dancing Script', cursive;">when we ffirst met</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <h3 class="font-bold text-lg">The First Meeting</h3>
+                    <small class="text-gray-600">June 2020</small>
+                    <p class="mt-2">That day at the coffee shop changed everything...</p>
+                </div>
+                
+                <div class="timeline-item right">
+                    <h3 class="font-bold text-lg">Our First Trip</h3>
+                    <small class="text-gray-600">August 2020</small>
+                    <p class="mt-2">Three days by the lake, just us and the stars...</p>
+                </div>
+                
+                <div class="timeline-item left">
+                    <h3 class="font-bold text-lg">That Movie Night</h3>
+                    <small class="text-gray-600">October 2020</small>
+                    <p class="mt-2">You fell asleep on my shoulder during the third act...</p>
+                </div>
+                
+                <div class="timeline-item right">
+                    <h3 class="font-bold text-lg">New Year's Eve</h3>
+                    <small class="text-gray-600">December 2020</small>
+                    <p class="mt-2">We danced in your kitchen at midnight...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Photos Section -->
+        <section class="py-12">
+            <h2 class="text-3xl font-bold text-center mb-12" style="font-family: 'Dancing Script', cursive;">Moments Frozen in Time</h2>
+            
+            <div class="memory-wall px-4">
+                <div class="polaroid">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0f123f50-da22-41d3-a411-6bcef4b08a4d.png" alt="Couple laughing together at a cafe with sunlight streaming through the window" class="w-full h-auto" />
+                    <p class="text-center mt-3">Our first date</p>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1ec486f6-538a-453f-8a71-c0fb9094c4f3.png" alt="Couple holding hands while walking on a beach at sunset" class="w-full h-auto" />
+                    <p class="text-center mt-3">Weekend getaway</p>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/84224a74-d3ef-4203-b5fd-f7da3466ff25.png" alt="Couple sharing ice cream cone in a city park with autumn leaves in the background" class="w-full h-auto" />
+                    <p class="text-center mt-3">Simple joys</p>
+                </div>
+                
+                <div class="polaroid">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dbddcf3f-0d14-4b93-abd2-4fc6782a6c12.png" alt="Close-up of intertwined hands with matching bracelets" class="w-full h-auto" />
+                    <p class="text-center mt-3">Connection</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Interactive Letter -->
+        <section class="py-12 text-center">
+            <h2 class="text-3xl font-bold mb-12" style="font-family: 'Dancing Script', cursive;">A Letter From My Heart</h2>
+            
+            <div class="envelope mb-8">
+                <div class="letter">
+                    <p class="font-bold">Dear You,</p>
+                    <p class="text-sm mt-2">If you're reading this, know that every word comes from a place of love, reflection, and hope...</p>
+                    <p class="text-sm mt-2">Would you like to read more?</p>
+                </div>
+            </div>
+            
+            <button class="btn-custom" id="readLetterBtn">Read Full Letter</button>
+            
+            <div id="fullLetter" class="hidden mt-8 max-w-2xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+                <p class="mb-4">My Dearest,</p>
+                
+                <p class="mb-4">Time and distance have given me perspective. What I once took for granted, I now recognize as extraordinary. The way your laughter filled a room, how you knew when I needed quiet support, the comfort of simply being near you — these are the things that have stayed with me.</p>
+                
+                <p class="mb-4">I understand now that love isn't about perfection, but about choosing each other, flaws and all, day after day. I've grown in ways I couldn't have without this separation, and I believe we could build something even more beautiful now.</p>
+                
+                <p class="mb-4">This isn't about going back to what was, but about moving forward together toward what could be. If you're open to it, I'd like the chance to show you how much you still mean to me.</p>
+                
+                <p class="mb-4">Whatever you decide, know that my love for you was always real, and part of me will always cherish what we shared.</p>
+                
+                <p class="mt-8">With all my heart,</p>
+                <p>Me</p>
+            </div>
+        </section>
+        
+        <!-- Promise Section -->
+        <section class="py-12 text-center">
+            <div class="max-w-3xl mx-auto bg-gradient-to-r from-pink-100 to-purple-100 p-8 rounded-lg shadow-inner">
+                <h2 class="text-3xl font-bold mb-6" style="font-family: 'Dancing Script', cursive;">My Promise to You</h2>
+                <p class="mb-6">If we give this another chance:</p>
+                
+                <div class="grid md:grid-cols-2 gap-6 text-left mb-8">
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">Better communication</h3>
+                            <p class="text-sm">I'll listen more and react less</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">More patience</h3>
+                            <p class="text-sm">Understanding that growth takes time</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">New memories</h3>
+                            <p class="text-sm">Creating fresh chapters together</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <svg class="w-6 h-6 text-green-500 mr-4 flex-shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <div>
+                            <h3 class="font-bold">Unconditional support</h3>
+                            <p class="text-sm">Being there for you through it all</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn-custom mb-4" id="contactBtn">Let's Talk</button>
+                <p class="text-sm text-gray-600">No pressure, just an open heart</p>
+            </div>
+        </section>
+        
+        <!-- End Section -->
+        <section class="py-12 text-center">
+            <div class="max-w-2xl mx-auto">
+                <svg class="w-16 h-16 text-pink-500 mx-auto mb-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                </svg>
+                
+                <h3 class="text-2xl font-bold mb-4">Whatever happens, thank you for being part of my story</h3>
+                <p class="mb-8">You helped me grow in ways I couldn't have alone</p>
+                
+                <div class="text-sm text-gray-500">
+                    <p>This website was made with care, hope, and respect</p>
+                    <p>June 2023</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        // Toggle full letter
+        document.getElementById('readLetterBtn').addEventListener('click', function() {
+            const letter = document.getElementById('fullLetter');
+            letter.classList.toggle('hidden');
+            this.textContent = letter.classList.contains('hidden') ? 'Read Full Letter' : 'Hide Letter';
+        });
+        
+        // Contact button
+        document.getElementById('contactBtn').addEventListener('click', function() {
+            alert("I would truly appreciate the chance to talk. Would you be open to a conversation? No expectations, just an honest talk between two people who once meant everything to each other.");
+        });
+        
+        // Polaroid hover effect for mobile
+        document.querySelectorAll('.polaroid').forEach(polaroid => {
+            polaroid.addEventListener('touchstart', function() {
+                this.classList.add('hover:rotate-[-5deg]', 'hover:scale-105');
+            });
+            
+            polaroid.addEventListener('touchend', function() {
+                this.classList.remove('hover:rotate-[-5deg]', 'hover:scale-105');
+            });
+        });
+        
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.timeline-item, .polaroid').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
+
